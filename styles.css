@@ -55,6 +55,7 @@ p {
 
 .brand,
 .nav-links,
+.header-actions,
 .hero-actions,
 .hero-stats,
 .download-actions {
@@ -177,6 +178,17 @@ p {
   white-space: nowrap;
 }
 
+.header-actions {
+  gap: 10px;
+  min-width: max-content;
+}
+
+.header-action.secondary {
+  color: var(--green-dark);
+  background: var(--mist);
+  border: 1px solid rgba(14, 143, 98, 0.22);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(420px, 1.1fr);
@@ -292,6 +304,12 @@ h3 {
 
 .play-store-button {
   min-width: 190px;
+}
+
+.web-login-button {
+  color: var(--green-dark);
+  border-color: rgba(14, 143, 98, 0.22);
+  background: var(--mist);
 }
 
 .store-icon {
@@ -872,20 +890,20 @@ h3 {
     padding-inline: 18px;
   }
 
-  .site-header > .header-action {
+  .site-header > .header-actions {
     display: none;
     grid-column: 1 / -1;
     width: 100%;
   }
 
   .site-header.is-open .nav-links,
-  .site-header.is-open > .header-action {
+  .site-header.is-open > .header-actions {
     display: flex;
     flex-direction: column;
   }
 
-  .site-header.is-open > .header-action {
-    align-items: center;
+  .site-header.is-open > .header-actions {
+    align-items: stretch;
     margin-top: -4px;
   }
 
